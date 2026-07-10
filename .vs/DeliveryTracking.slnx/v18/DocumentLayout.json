@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|d:\\alisson\\documents\\workspace\\desenvolvimento\\projetos\\sistema de controle de entrega de epi\\deliverytracking\\deliverytracking\\deliverytracking\\context\\deliverytrackingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|solutionrelative:deliverytracking\\context\\deliverytrackingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|d:\\alisson\\documents\\workspace\\desenvolvimento\\projetos\\sistema de controle de entrega de epi\\deliverytracking\\deliverytracking\\deliverytracking\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|solutionrelative:deliverytracking\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|d:\\alisson\\documents\\workspace\\desenvolvimento\\projetos\\sistema de controle de entrega de epi\\deliverytracking\\deliverytracking\\deliverytracking\\context\\entityconfigurations\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F38BD192-275F-73C5-A501-5EA9DC4F79F1}|DeliveryTracking\\DeliveryTracking.csproj|solutionrelative:deliverytracking\\context\\entityconfigurations\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeConfiguration.cs",
+              "DocumentMoniker": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Context\\EntityConfigurations\\EmployeeConfiguration.cs",
+              "RelativeDocumentMoniker": "DeliveryTracking\\Context\\EntityConfigurations\\EmployeeConfiguration.cs",
+              "ToolTip": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Context\\EntityConfigurations\\EmployeeConfiguration.cs",
+              "RelativeToolTip": "DeliveryTracking\\Context\\EntityConfigurations\\EmployeeConfiguration.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T23:11:19.59Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "DeliveryTracking\\Models\\Employee.cs",
+              "ToolTip": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Models\\Employee.cs",
+              "RelativeToolTip": "DeliveryTracking\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T23:21:00.698Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeliveryTrackingDbContext.cs",
+              "DocumentMoniker": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Context\\DeliveryTrackingDbContext.cs",
+              "RelativeDocumentMoniker": "DeliveryTracking\\Context\\DeliveryTrackingDbContext.cs",
+              "ToolTip": "D:\\Alisson\\Documents\\Workspace\\Desenvolvimento\\Projetos\\Sistema de Controle de Entrega de EPI\\DeliveryTracking\\DeliveryTracking\\DeliveryTracking\\Context\\DeliveryTrackingDbContext.cs",
+              "RelativeToolTip": "DeliveryTracking\\Context\\DeliveryTrackingDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T23:27:29.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 157,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
