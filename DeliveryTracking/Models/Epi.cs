@@ -5,7 +5,7 @@ namespace DeliveryTracking.Models
     public class Epi : Entity
     {
         public string Name { get; set; } = string.Empty;
-        public string CA { get; set; } = string.Empty;
+        public int Ca { get; set; }
         public string Manufacturer { get; set; } = string.Empty;
         public int QuantityInStock { get; set; }
 

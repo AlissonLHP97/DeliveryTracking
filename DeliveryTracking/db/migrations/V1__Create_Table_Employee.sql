@@ -1,0 +1,11 @@
+﻿CREATE TABLE Employee
+(
+	[Id] BIGINT IDENTITY(1,1) PRIMARY KEY,
+	[Name] NVARCHAR(100) NOT NULL,
+	[Cpf] NVARCHAR(11) NOT NULL,
+	[Cargo] NVARCHAR(50) NOT NULL,
+	[Sector] NVARCHAR(50) NOT NULL,
+	[DateOfAdmission] DATE NOT NULL	
+);
+CREATE UNIQUE INDEX UQ_Employee_Cpf 
+ON Employee(Cpf);

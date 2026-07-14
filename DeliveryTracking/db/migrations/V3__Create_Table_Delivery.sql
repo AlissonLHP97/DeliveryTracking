@@ -1,0 +1,16 @@
+﻿CREATE TABLE Delivery
+(
+	[Id] BIGINT IDENTITY(1,1) PRIMARY KEY,
+	[EmployeeId] BIGINT NOT NULL,
+	[EpiId] BIGINT NOT NULL,
+	[Quantity] INT NOT NULL,
+	[DateOfDelivery] DATE NOT NULL,
+
+	CONSTRAINT FK_Delivery_Employee
+	FOREIGN KEY(EmployeeId)
+	REFERENCES Employee(Id),
+
+	CONSTRAINT FK_Delivery_Epi
+	FOREIGN KEY(EpiId)
+	REFERENCES Epi(Id)
+);

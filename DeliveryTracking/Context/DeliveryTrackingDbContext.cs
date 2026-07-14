@@ -13,18 +13,9 @@ namespace DeliveryTracking.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DeliveryTrackingDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DeliveryTrackingDbContext).Assembly);
 
-            modelBuilder.Entity<Delivery>()
-                .HasOne(e => e.Employee)
-                .WithMany(d => d.Deliveries)
-                .HasForeignKey(f => f.EmployeeId);
-
-            modelBuilder.Entity<Delivery>()
-                .HasOne(e => e.Epi)
-                .WithMany(d => d.Deliveries)
-                .HasForeignKey(id => id.EpiId);
         }
     }
 }
