@@ -3,29 +3,27 @@ using DeliveryTracking.Models;
 
 namespace DeliveryTracking.Service.Impl
 {
-    public class EpiService : IEpiService
+    public class EmployeeServiceImpl : IEmployeeService
     {
-        private readonly IEpiService _repository;
-
-        public EpiService(IEpiService repository)
+        private readonly IEmployeeService _repository;
+        public EmployeeServiceImpl(IEmployeeService repository)
         {
             _repository = repository;
         }
-
-        public Epi? FindById(long id)
+        public Employee? FindById(long id)
         {
             return _repository.FindById(id);
         }
-        public IEnumerable<Epi> FindAll()
+        public IEnumerable<Employee> FindAll()
         {
             return _repository.FindAll();
         }
 
-        public Epi Create(Epi entity)
+        public Employee Create(Employee entity)
         {
             return _repository.Create(entity);
         }
-        public Epi Update(Epi entity)
+        public Employee Update(Employee entity)
         {
             return _repository.Update(entity);
         }
@@ -34,6 +32,13 @@ namespace DeliveryTracking.Service.Impl
         {
             _repository.Delete(id);
         }
-        
+
+        public bool Exists(long id)
+        {
+            return _repository.Exists(id);
+        }
+
+
+
     }
 }
