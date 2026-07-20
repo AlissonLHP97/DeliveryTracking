@@ -1,29 +1,31 @@
 ﻿using DeliveryTracking.GenericRepository;
 using DeliveryTracking.Models;
 
-namespace DeliveryTracking.Service
+namespace DeliveryTracking.Service.Impl
 {
-    public class EntityService : IRepository<Employee>
+    public class EpiService : IEpiService
     {
-        private IRepository<Employee> _repository;
-        public EntityService(IRepository<Employee> repository)
+        private readonly IEpiService _repository;
+
+        public EpiService(IEpiService repository)
         {
             _repository = repository;
         }
-        public Employee? FindById(long id)
+
+        public Epi? FindById(long id)
         {
             return _repository.FindById(id);
         }
-        public List<Employee> FindAll()
+        public IEnumerable<Epi> FindAll()
         {
             return _repository.FindAll();
         }
 
-        public Employee Create(Employee entity)
+        public Epi Create(Epi entity)
         {
             return _repository.Create(entity);
         }
-        public Employee Update(Employee entity)
+        public Epi Update(Epi entity)
         {
             return _repository.Update(entity);
         }
@@ -32,13 +34,6 @@ namespace DeliveryTracking.Service
         {
             _repository.Delete(id);
         }
-
-        public bool Exists(long id)
-        {
-            return _repository.Exists(id);
-        }
-
-
-
+        
     }
 }
