@@ -1,4 +1,6 @@
 using DeliveryTracking.Configurations;
+using DeliveryTracking.GenericRepository;
+using DeliveryTracking.Repositories.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerConfiguration();
 
 builder.Services.AddEvolveConfiguration(builder.Configuration, builder.Environment);
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
 
