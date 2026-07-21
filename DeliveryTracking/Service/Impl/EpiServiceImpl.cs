@@ -3,15 +3,10 @@ using DeliveryTracking.Models;
 
 namespace DeliveryTracking.Service.Impl
 {
-    public class EpiServiceImpl : IEpiService
+    public class EpiServiceImpl(IRepository<Epi> repository) : IEpiService
     {
-        private readonly IEpiService _repository;
-
-        public EpiServiceImpl(IEpiService repository)
-        {
-            _repository = repository;
-        }
-
+        private readonly IRepository<Epi> _repository = repository;
+        
         public Epi? FindById(long id)
         {
             return _repository.FindById(id);
