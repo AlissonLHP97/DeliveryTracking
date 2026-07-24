@@ -1,4 +1,5 @@
 ﻿using DeliveryTracking.Models.Base;
+using System.Text.Json.Serialization;
 
 namespace DeliveryTracking.Models
 {
@@ -10,6 +11,7 @@ namespace DeliveryTracking.Models
         public string Sector { get; set; } = string.Empty;
         public DateOnly DateOfAdmission { get; set; }
 
+        [JsonIgnore]
         public ICollection<Delivery> Deliveries { get; set; } = new List<Delivery>();
         
 }

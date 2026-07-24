@@ -5,7 +5,7 @@ namespace DeliveryTracking.GenericRepository
     public interface IRepository <T> where T : Entity
     {
         T? FindById(long id);
-        List<T> FindAll();
+        IEnumerable<T> FindAll();
         T Create (T entity);
         T Update(T entity);
         void Delete(long id);

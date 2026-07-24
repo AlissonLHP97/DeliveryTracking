@@ -1,4 +1,5 @@
 ﻿using EvolveDb;
+using Serilog;
 using Microsoft.Data.SqlClient;
 
 namespace DeliveryTracking.Configurations
@@ -15,7 +16,7 @@ namespace DeliveryTracking.Configurations
             try
             {
                 using var evolveConnection = new SqlConnection(stringConnection);
-                var evolve = new Evolve(evolveConnection)
+                var evolve = new Evolve(evolveConnection, msg => Log.Information(msg))
                 {
                     Locations = new List<string> { "db/migrations", "db/dataset" },
                     IsEraseDisabled = true
@@ -24,7 +25,7 @@ namespace DeliveryTracking.Configurations
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                Log.Error(ex, "An error occurred while migrating the databse.");
                 throw;
             }
             return services;

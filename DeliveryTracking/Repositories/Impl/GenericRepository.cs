@@ -19,7 +19,7 @@ namespace DeliveryTracking.Repositories.Impl
             return _dataset.Find(id);
         }
 
-        public List<T> FindAll()
+        public IEnumerable<T> FindAll()
         {
             return _dataset.ToList();
         }
@@ -34,7 +34,7 @@ namespace DeliveryTracking.Repositories.Impl
         {
             var existingEntity = _dataset.Find(entity.Id);
             if (existingEntity == null) return null;
-            _context.Entry(entity).CurrentValues.SetValues(existingEntity);
+            _context.Entry(existingEntity).CurrentValues.SetValues(entity);
             _context.SaveChanges();
             return entity;
         }

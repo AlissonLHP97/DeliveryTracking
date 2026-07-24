@@ -6,9 +6,10 @@ namespace DeliveryTracking.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class DeliveryController(IDeliveryService service) : ControllerBase
+    public class DeliveryController(IDeliveryService service, ILogger<DeliveryController> logger) : ControllerBase
     {
         private readonly IDeliveryService _service = service;
+        private readonly ILogger<DeliveryController> _logger = logger;
 
         [HttpGet]
         public ActionResult GetAllDelivery()
@@ -23,6 +24,7 @@ namespace DeliveryTracking.Controllers
         [HttpPost]
         public IActionResult RegisterDelivery([FromBody] Delivery delivery)
         {
+            _logger.LogInformation("Registring Delivery");
             return Ok(_service.Register(delivery));
         }
         

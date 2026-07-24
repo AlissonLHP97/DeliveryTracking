@@ -6,8 +6,8 @@ using DeliveryTracking.Service.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddSeriLogging();
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddDataBaseConfiguration(builder.Configuration);
 

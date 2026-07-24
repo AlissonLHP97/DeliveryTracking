@@ -34,7 +34,7 @@ namespace DeliveryTracking.Controllers
             return Ok(_service.Update(epi));
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteEpi(long Id)
         {
             _service.Delete(Id);
