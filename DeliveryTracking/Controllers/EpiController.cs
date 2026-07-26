@@ -1,4 +1,5 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.EPI;
+using DeliveryTracking.Models;
 using DeliveryTracking.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,13 +24,13 @@ namespace DeliveryTracking.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEpi([FromBody] Epi epi)
+        public IActionResult CreateEpi([FromBody] EpiCreateDTO epi)
         {
             return Ok(_service.Create(epi));
         }
 
         [HttpPut]
-        public IActionResult UpdateEpi([FromBody] Epi epi)
+        public IActionResult UpdateEpi([FromBody] EpiUpdateDTO epi)
         {
             return Ok(_service.Update(epi));
         }

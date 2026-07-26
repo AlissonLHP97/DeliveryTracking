@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DeliveryTracking.Models
 {
-    [Table("Delivery")]
     public class Delivery : Entity
     {
         public long EmployeeId { get; set; }

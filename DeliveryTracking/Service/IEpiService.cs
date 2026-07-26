@@ -1,13 +1,13 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.EPI;
 
 namespace DeliveryTracking.Service
 {
     public interface IEpiService
     {
-        Epi? FindById(long id);
-        IEnumerable<Epi> FindAll();
-        Epi Create(Epi entity);
-        Epi Update(Epi entity);
+        EpiResponseDTO? FindById(long id);
+        IEnumerable<EpiResponseDTO> FindAll();
+        EpiCreateDTO? Create(EpiCreateDTO dto);
+        EpiUpdateDTO? Update(EpiUpdateDTO dto);
         void Delete(long id);
 
     }

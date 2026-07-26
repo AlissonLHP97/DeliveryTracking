@@ -1,4 +1,5 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.Delivery;
+using DeliveryTracking.Models;
 using DeliveryTracking.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +23,7 @@ namespace DeliveryTracking.Controllers
             return Ok(_service.FindById(id));
         }
         [HttpPost]
-        public IActionResult RegisterDelivery([FromBody] Delivery delivery)
+        public IActionResult RegisterDelivery([FromBody] DeliveryRegisterDTO delivery)
         {
             _logger.LogInformation("Registring Delivery");
             return Ok(_service.Register(delivery));

@@ -1,12 +1,11 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.Delivery;
 
 namespace DeliveryTracking.Service
 {
     public interface IDeliveryService
     {
-        IEnumerable<Delivery> FindAll();
-        Delivery? FindById(long id);
-        Delivery Register(Delivery delivery);
-
+        IEnumerable<DeliveryResponseDTO> FindAll();
+        DeliveryResponseDTO? FindById(long id);
+        DeliveryRegisterDTO? Register(DeliveryRegisterDTO dto);
     }
 }

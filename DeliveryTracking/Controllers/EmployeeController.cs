@@ -1,7 +1,5 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.Employee;
 using DeliveryTracking.Service;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DeliveryTracking.Controllers
@@ -24,15 +22,15 @@ namespace DeliveryTracking.Controllers
             return Ok(_service.FindById(id));
         }
         [HttpPost]
-        public IActionResult CreateEmployee([FromBody] Employee employee)
+        public IActionResult CreateEmployee([FromBody] EmployeeCreateDTO employeeDto)
         {
             _logger.LogInformation("Creating Employee");
-            return Ok(_service.Create(employee));
+            return Ok(_service.Create(employeeDto));
         }
         [HttpPut]
-        public IActionResult UpdateEmployee([FromBody] Employee employee)
+        public IActionResult UpdateEmployee([FromBody] EmployeeUpdateDTO employeeDto)
         {
-            return Ok(_service.Update(employee));
+            return Ok(_service.Update(employeeDto));
         }
         [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(long Id)

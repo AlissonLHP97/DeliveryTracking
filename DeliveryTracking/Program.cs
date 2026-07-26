@@ -1,5 +1,6 @@
 using DeliveryTracking.Configurations;
 using DeliveryTracking.GenericRepository;
+using DeliveryTracking.Repositories;
 using DeliveryTracking.Repositories.Impl;
 using DeliveryTracking.Service;
 using DeliveryTracking.Service.Impl;
@@ -16,12 +17,17 @@ builder.Services.AddSwaggerConfiguration();
 
 builder.Services.AddEvolveConfiguration(builder.Configuration, builder.Environment);
 
-builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepositories<>));
+
 builder.Services.AddScoped<IEmployeeService, EmployeeServiceImpl>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
 builder.Services.AddScoped<IEpiService, EpiServiceImpl>();
+builder.Services.AddScoped<IEpiRepository, EpiRepository>();
+
 builder.Services.AddScoped<IDeliveryService, DeliveryServiceImpl>();
 
-var app = builder.Build();
+    var app = builder.Build();
 
 app.UseHttpsRedirection();
 

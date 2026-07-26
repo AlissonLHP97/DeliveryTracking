@@ -12,7 +12,7 @@ namespace DeliveryTracking.Models
         public DateOnly DateOfAdmission { get; set; }
 
         [JsonIgnore]
-        public ICollection<Delivery> Deliveries { get; set; } = new List<Delivery>();
+        public ICollection<Delivery> Deliveries { get; set; } = [];
         
 }
 }

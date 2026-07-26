@@ -5,15 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeliveryTracking.Repositories.Impl
 {
-    public class GenericRepository<T> : IRepository<T> where T : Entity
+    public class GenericRepositories<T>(DeliveryTrackingDbContext context) : IRepository<T> where T : Entity
     {
-        private DeliveryTrackingDbContext _context;
-        private DbSet<T> _dataset;
-        public GenericRepository(DeliveryTrackingDbContext context)
-        {
-            _context = context;
-            _dataset = context.Set<T>();
-        }
+        private readonly DeliveryTrackingDbContext _context = context;
+        private readonly DbSet<T> _dataset = context.Set<T>();
+       
         public T? FindById(long id)
         {
             return _dataset.Find(id);

@@ -1,13 +1,15 @@
-﻿using DeliveryTracking.Models;
+﻿using DeliveryTracking.DTO.Employee;
+using DeliveryTracking.Models;
 
 namespace DeliveryTracking.Service
 {
     public interface IEmployeeService
     {
-        Employee? FindById(long id);
-        IEnumerable<Employee> FindAll();
-        Employee Create(Employee entity);
-        Employee Update(Employee entity);
+        EmployeeResponseDTO? FindById(long id);
+        IEnumerable<EmployeeResponseDTO> FindAll();
+        EmployeeCreateDTO Create(EmployeeCreateDTO dto);
+        EmployeeUpdateDTO? Update(EmployeeUpdateDTO dto);       
         void Delete(long id);
+
     }
 }

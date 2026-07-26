@@ -1,34 +1,64 @@
-﻿using DeliveryTracking.GenericRepository;
+﻿using DeliveryTracking.DTO.EPI;
+using DeliveryTracking.GenericRepository;
 using DeliveryTracking.Models;
+using DeliveryTracking.Repositories;
+using Mapster;
 
 namespace DeliveryTracking.Service.Impl
 {
-    public class EpiServiceImpl(IRepository<Epi> repository) : IEpiService
+    public class EpiServiceImpl(IEpiRepository repository) : IEpiService
     {
-        private readonly IRepository<Epi> _repository = repository;
-        
-        public Epi? FindById(long id)
+        private readonly IEpiRepository _repository = repository;
+
+        public EpiResponseDTO? FindById(long id)
         {
-            return _repository.FindById(id);
+            var epi = _repository.FindById(id);
+
+            if (epi is null) return null;
+
+            return epi?.Adapt<EpiResponseDTO>();
         }
-        public IEnumerable<Epi> FindAll()
+        public IEnumerable<EpiResponseDTO> FindAll()
         {
-            return _repository.FindAll();
+            IEnumerable<Epi> epis = _repository.FindAll();
+
+            return epis.Adapt<IEnumerable<EpiResponseDTO>>();
         }
 
-        public Epi Create(Epi entity)
+        public EpiCreateDTO? Create(EpiCreateDTO dto)
         {
-            return _repository.Create(entity);
+            if (_repository.Exists(dto.Ca))
+                throw new Exception("An EPI with this CA already exists");
+
+            var epi = dto.Adapt<Epi>();
+
+            epi = _repository.Create(epi);
+
+            return epi?.Adapt<EpiCreateDTO>();
+
         }
-        public Epi Update(Epi entity)
+        public EpiUpdateDTO? Update(EpiUpdateDTO dto)
         {
-            return _repository.Update(entity);
+            //Search epi by Id 
+            var epi = _repository.FindById(dto.Id);
+            //Validate if epi exists
+            if (epi is null) return null;
+            // Apply DTO values to existing epi entity
+            dto.Adapt(epi);
+            //Update the epi in database
+            epi = _repository.Update(epi);
+            //return updated epi as DTO
+            return epi?.Adapt<EpiUpdateDTO>();
         }
 
         public void Delete(long id)
         {
+            var epi = _repository.FindById(id);
+            
+            if(epi is null) return;
+
             _repository.Delete(id);
         }
-        
+
     }
 }
