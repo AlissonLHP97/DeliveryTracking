@@ -1,16 +1,17 @@
 ﻿using DeliveryTracking.DTO.Delivery;
 using DeliveryTracking.GenericRepository;
 using DeliveryTracking.Models;
+using DeliveryTracking.Repositories;
 using Mapster;
 
 namespace DeliveryTracking.Service.Impl
 {
     public class DeliveryServiceImpl
-        (IRepository<Delivery> deliveryRepository,
+        (IDeliveryRepository deliveryRepository,
         IRepository<Employee> employeerepository,
         IRepository<Epi> epiRepository) : IDeliveryService
     {
-        private readonly IRepository<Delivery> _deliveryRepository = deliveryRepository;
+        private readonly IDeliveryRepository _deliveryRepository = deliveryRepository;
         private readonly IRepository<Employee> _employeeRepository = employeerepository;
         private readonly IRepository<Epi> _epiRepository = epiRepository;
 
@@ -47,13 +48,13 @@ namespace DeliveryTracking.Service.Impl
         }
         public IEnumerable<DeliveryResponseDTO> FindAll()
         {
-            IEnumerable<Delivery> deliveries = _deliveryRepository.FindAll();
+            IEnumerable<Delivery> deliveries = _deliveryRepository.FindAllWithDetails();
             return deliveries.Adapt<IEnumerable<DeliveryResponseDTO>>();
         }
 
         public DeliveryResponseDTO? FindById(long id)
         {
-            var delivery = _deliveryRepository.FindById(id);
+            var delivery = _deliveryRepository.FindByIdWithDetails(id);
 
             if (delivery is null) throw new KeyNotFoundException("Delivery not found");
 

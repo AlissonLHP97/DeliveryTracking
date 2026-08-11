@@ -26,6 +26,7 @@ builder.Services.AddScoped<IEpiService, EpiServiceImpl>();
 builder.Services.AddScoped<IEpiRepository, EpiRepository>();
 
 builder.Services.AddScoped<IDeliveryService, DeliveryServiceImpl>();
+builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
 
     var app = builder.Build();
 

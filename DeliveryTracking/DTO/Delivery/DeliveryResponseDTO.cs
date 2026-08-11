@@ -4,9 +4,13 @@ namespace DeliveryTracking.DTO.Delivery
 {
     public class DeliveryResponseDTO : Entity
     {
-        public long EmployeeId { get; set; }
-        public long EpiId { get; set; }
+        public string EmployeeName { get; set; } = string.Empty;
+
+        public string EpiName { get; set; } = string.Empty;
+
         public int Quantity { get; set; }
+
         public DateTime DateOfDelivery { get; set; }
     }
 }
+
